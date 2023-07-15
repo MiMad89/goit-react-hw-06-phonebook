@@ -1,20 +1,21 @@
 import { useDispatch } from 'react-redux';
-import { addContact } from 'redux/contactsSlice';
 import css from './ContactsForm.module.css';
+import { addContact } from 'redux/contactsSlice';
 
 export const ContactsForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
     e.preventDefault();
-
     const form = e.target;
     const name = form.elements.name.value;
     const number = form.elements.number.value;
 
-    dispatch(addContact({ name, number }));
+    dispatch(addContact(name, number));
+
     form.reset();
   };
+
 
   return (
     <>

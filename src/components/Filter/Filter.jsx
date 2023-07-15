@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux';
-import { changeFilter } from '../../redux/filtersSlice';
+import { filterContact } from '../../redux/filtersSlice';
 
 export const Filter = () => {
   const dispatch = useDispatch();
 
-  const handleFilter = e => dispatch(changeFilter(e.target.value));
+  const handleFilter = e => dispatch(filterContact(e.target.value));
 
   return (
     <div>
