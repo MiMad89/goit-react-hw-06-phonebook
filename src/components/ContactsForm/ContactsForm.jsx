@@ -16,7 +16,6 @@ export const ContactsForm = () => {
     form.reset();
   };
 
-
   return (
     <>
       <form className={css.contactsForm} onSubmit={handleSubmit}>
@@ -34,7 +33,7 @@ export const ContactsForm = () => {
           type="tel"
           name="number"
           placeholder="Enter phone number"
-          pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
+          pattern="^[+]?[0-9]{1,3}-?[0-9]{1,3}-?[0-9]{1,3}-?[0-9]{2,4}$"
           title="Phone number must be 11 digits and can contain numbers, spaces, dashes, pot-bellied brackets and can start with +"
           required
         />
